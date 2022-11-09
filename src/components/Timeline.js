@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const StyledTimeline = styled.div`
   flex: 1;
-  width: 95%;
+  width: 90%;
   margin: auto;
   margin-bottom: 60px;
   padding: 16px;
   overflow: hidden;
-  background-color: #FFFFFF;
+  background-color: #F8EDFF;
   border-radius: 0px 0px 15px 15px;
   h2 {
     font-size: 20px;
