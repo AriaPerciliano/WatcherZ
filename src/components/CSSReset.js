@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const CSSReset = createGlobalStyle`
-/* ===== Scrollbar ===== */
+/* Scrollbar */
   * {
     scrollbar-width: auto;
     scrollbar-color: #8f54a0 #ffffff;
@@ -37,6 +37,7 @@ export const CSSReset = createGlobalStyle`
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    scroll-behavior: smooth;
   }
   body {
     display: flex;
