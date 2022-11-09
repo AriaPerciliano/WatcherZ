@@ -38,15 +38,23 @@ export default HomePage
 
 const StyledHeader = styled.div`
     .user-info img {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
         border-style: solid;
         border-width: 3px;
         border-color: #6C4888;
     }
+    .banner {
+        background-color: black;
+        width: 100%;
+        height: 338px;
+    }
     .banner img {
-        width: 100vw;
+        //tirar o display none quando achar uma imagem boa
+        display: none;
+        width: 100%;
+        height: 338px;
         object-fit: cover;
     }
     .user-info {
@@ -55,6 +63,9 @@ const StyledHeader = styled.div`
         width: 100%;
         padding: 16px 32px;
         gap: 16px;
+        font-size: 20px;
+        background-color: #EADEF4;
+        border-radius: 0px 0px 10px 10px;
     }
 `;
 function Header() {

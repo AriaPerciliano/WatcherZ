@@ -28,9 +28,11 @@ export const CSSReset = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
   }
   body {
     font-family: sans-serif;
+    background-color: #DDC5F1;
   }
   /* NextJS */
   html {
