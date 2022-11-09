@@ -4,7 +4,7 @@ import styled from "styled-components"
 const StyledSearch = styled.div`
   display: flex;
   flex-direction: row;
-  border: 1px solid ${({ theme }) => theme.borderBase};
+  border: 1px solid ${({ theme }) => theme.borderBase || "#E3D2F2"};
   max-width: 425px;
   width: 100%;
   border-radius: 20px;
@@ -17,15 +17,15 @@ const StyledSearch = styled.div`
     border: none;
     outline: none;
     color: ${({ theme }) => theme.textColorBase};
-    background-color: ${({ theme }) => theme.backgroundBase};
+    background-color: ${({ theme }) => theme.backgroundBase || "#F8EDFF"};
   }
   button {
     flex: 1;
     cursor: pointer;
     border: none;
-    background-color: ${({ theme }) => theme.backgroundLevel2};
+    background-color: ${({ theme }) => theme.backgroundLevel2 || "#D9C2EF"};
     box-shadow: 0 1px 0 rgb(0 0 0 / 10%);
-    border-left: 1px solid ${({ theme }) => theme.borderBase};
+    border-left: 1px solid ${({ theme }) => theme.borderBase || "#E3D2F2"};
     width: 40px;
     height: 40px;
     @media (min-width: 600px) {
