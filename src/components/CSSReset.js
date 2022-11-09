@@ -1,6 +1,28 @@
 import { createGlobalStyle } from "styled-components";
 
 export const CSSReset = createGlobalStyle`
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #8f54a0 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #EBE6EF;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #520291;
+    border-radius: 10px;
+    border: 3px solid #EBE6EF;
+  }
+//-----------------------------------------------------------------------------
   /* Reset */
   * {
     margin: 0;

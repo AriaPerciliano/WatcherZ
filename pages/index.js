@@ -37,13 +37,19 @@ export default HomePage
 
 
 const StyledHeader = styled.div`
-    img {
+    .user-info img {
         width: 80px;
         height: 80px;
         border-radius: 50%;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #6C4888;
+    }
+    .banner img {
+        width: 100vw;
+        object-fit: cover;
     }
     .user-info {
-        margin-top: 80px;
         display: flex;
         align-items: center;
         width: 100%;
@@ -55,6 +61,9 @@ function Header() {
     return (
         <StyledHeader>
             {/*<img src="banner" />*/}
+            <section className="banner">
+            <img src={config.banner} />
+            </section>
             <section className="user-info">
                 <img src={`https://github.com/${config.github}.png`} />
                 <div>

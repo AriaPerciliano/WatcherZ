@@ -6,7 +6,7 @@ export const StyledTimeline = styled.div`
   padding: 16px;
   overflow: hidden;
   h2 {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 16px;
     text-transform: capitalize;
   }
@@ -33,12 +33,17 @@ export const StyledTimeline = styled.div`
       grid-auto-columns: minmax(200px,1fr);
       overflow-x: scroll;
       scroll-snap-type: x mandatory;
+      img {
+        border-radius: 10px;
+        box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.4);
+      }
       a {
         scroll-snap-align: start;
         span {
           padding-top: 8px;
           display: block;
           padding-right: 24px;
+          padding-bottom: 8px;
           color: ${({ theme }) => theme.textColorBase || "#222222"};
         }
       }
