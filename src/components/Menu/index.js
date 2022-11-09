@@ -1,7 +1,7 @@
 import { CONFIG_FILES } from "next/dist/shared/lib/constants";
 import styled from "styled-components";
 import config from "../../../config.json";
-import Search from "./Components/Seach";
+import Search from "./components/Seach";
 
 const StyledMenu = styled.header`
   display: flex;
