@@ -4,9 +4,11 @@ export const StyledTimeline = styled.div`
   flex: 1;
   width: 95%;
   margin: auto;
+  margin-bottom: 60px;
   padding: 16px;
   overflow: hidden;
   background-color: #FFFFFF;
+  border-radius: 0px 0px 15px 15px;
   h2 {
     font-size: 20px;
     margin-bottom: 16px;

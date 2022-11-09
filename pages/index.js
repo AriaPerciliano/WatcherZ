@@ -46,7 +46,7 @@ const StyledHeader = styled.div`
         border-color: #6C4888;
     }
     .banner {
-        background-color: black;
+        background-color: #270244;
         width: 100%;
         height: 338px;
     }
@@ -61,7 +61,7 @@ const StyledHeader = styled.div`
         display: flex;
         align-items: center;
         width: 100%;
-        padding: 16px 32px;
+        padding: 16px 16px 26px;
         gap: 16px;
         font-size: 20px;
         background-color: #EADEF4;

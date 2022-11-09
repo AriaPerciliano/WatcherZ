@@ -1,14 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 export const CSSReset = createGlobalStyle`
-/* ===== Scrollbar CSS ===== */
-  /* Firefox */
+/* ===== Scrollbar ===== */
   * {
     scrollbar-width: auto;
     scrollbar-color: #8f54a0 #ffffff;
   }
 
-  /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 16px;
   }
@@ -22,8 +20,7 @@ export const CSSReset = createGlobalStyle`
     border-radius: 10px;
     border: 3px solid #EBE6EF;
   }
-//-----------------------------------------------------------------------------
-  /* Reset */
+/* Reset */
   * {
     margin: 0;
     padding: 0;
@@ -34,7 +31,7 @@ export const CSSReset = createGlobalStyle`
     font-family: sans-serif;
     background-color: #DDC5F1;
   }
-  /* NextJS */
+/* NextJS */
   html {
     display: flex;
     flex-direction: column;
@@ -48,7 +45,7 @@ export const CSSReset = createGlobalStyle`
     display: flex;
     flex: 1;
   }
-  /* Globals */
+/* Globals */
   button,
   a {
     text-decoration: none;
