@@ -13,6 +13,7 @@ export const CSSReset = createGlobalStyle`
 
   *::-webkit-scrollbar-track {
     background: #EBE6EF;
+    border-radius: 5px;
   }
 
   *::-webkit-scrollbar-thumb {

@@ -1,3 +1,4 @@
+import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
 import { CSSReset } from "../src/components/CSSReset";
@@ -8,16 +9,16 @@ function HomePage() {
     const homePageStyles = {
         //backgroundColor: "red"
     };
+    const  [filterValue, setfilterValue] = React.useState("");
 
-    //console.log(config.playlists);
 
     return (
         <>
             <CSSReset />
             <div style={homePageStyles}>
-                <Menu />
+                <Menu filterValue={filterValue} setfilterValue={setfilterValue} />
                 <Header />
-                <Timeline playlists={config.playlists}>
+                <Timeline searchValue={filterValue} playlists={config.playlists}>
                     Conteudo
                 </Timeline>
         </div>
@@ -35,7 +36,7 @@ export default HomePage
     )
 }*/
 
-
+/* Header */
 const StyledHeader = styled.div`
     .user-info img {
         width: 100px;
@@ -45,7 +46,7 @@ const StyledHeader = styled.div`
         border-width: 3px;
         border-color: #6C4888;
     }
-    .banner {
+    /*.banner {
         background-color: #270244;
         width: 100%;
         height: 338px;
@@ -56,7 +57,7 @@ const StyledHeader = styled.div`
         width: 100%;
         height: 338px;
         object-fit: cover;
-    }
+    }*/
     .user-info {
         display: flex;
         align-items: center;
@@ -68,13 +69,21 @@ const StyledHeader = styled.div`
         border-radius: 0px 0px 10px 10px;
     }
 `;
+const StyledBanner = styled.div`
+    background-color: #270244;
+    background-image: url(${config.banner});
+    background-size: cover;
+    width: 100%;
+    height: 338px;
+`;
 function Header() {
     return (
         <StyledHeader>
             {/*<img src="banner" />*/}
-            <section className="banner">
+            {/*<section className="banner">
             <img src={config.banner} />
-            </section>
+    </section>*/}
+            <StyledBanner />
             <section className="user-info">
                 <img src={`https://github.com/${config.github}.png`} />
                 <div>
@@ -85,23 +94,27 @@ function Header() {
         </StyledHeader>
     )
 }
-
-function Timeline(props) {
+/* Timeline */
+function Timeline({searchValue, ...props}) {
     //console.log("Dentro do componente", props);
     const playlistName = Object.keys(props.playlists);
     return (
         <StyledTimeline>
             {playlistName.map(function (playlistName) {
                 const videos = props.playlists[playlistName];
-                console.log(playlistName)
-                console.log(videos)
+                //console.log(playlistName)
+                //console.log(videos)
                 return (
-                    <section>
+                    <section key={playlistName}>
                         <h2>{playlistName}</h2>
                         <div>
-                            {videos.map((video) => {
+                            {videos.filter((video) => {
+                                const titleNormalized = video.title.toLowerCase()
+                                const searchValueNormalized = searchValue.toLowerCase()
+                                return titleNormalized.includes(searchValueNormalized)    
+                            }).map((video) => {
                                 return (
-                                    <a href={video.url}>
+                                    <a key={video.url} href={video.url}>
                                         <img src={video.thumb} />
                                         <span>
                                             {video.title}

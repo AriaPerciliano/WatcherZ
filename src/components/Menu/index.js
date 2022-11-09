@@ -1,6 +1,7 @@
 import { CONFIG_FILES } from "next/dist/shared/lib/constants";
 import styled from "styled-components";
-import config from "../../config.json";
+import config from "../../../config.json";
+import Search from "./Components/Seach";
 
 const StyledMenu = styled.header`
   display: flex;
@@ -14,6 +15,7 @@ const StyledMenu = styled.header`
   gap: 16px;
   position: fixed;
   width: 100%;
+  z-index: 50;
   .logo {
     width: 100%;
     max-width: 80px;
@@ -26,12 +28,13 @@ const StyledMenu = styled.header`
   }
 `;
 
-export default function Menu() {
+export default function Menu({ filterValue, setfilterValue }) {
   return (
     <StyledMenu>
       <div>
         <Logo />
       </div>
+      <Search filterValue={filterValue} setfilterValue={setfilterValue} />
     </StyledMenu>
   );
 }
