@@ -25,6 +25,34 @@ const StyledMenu = styled.header`
     display: inline;
     position: fixed;
     left: 75px;
+/* Certeza que essa não é a melhor forma de fazer isso */
+    @media screen and (max-width: 890px) {
+        font-size: 1.9em;
+    }
+    @media screen and (max-width: 880px) {
+        font-size: 1.8em;
+    }
+    @media screen and (max-width: 870px) {
+        font-size: 1.7em;
+    }
+    @media screen and (max-width: 860px) {
+        font-size: 1.6em;
+    }
+    @media screen and (max-width: 850px) {
+        font-size: 1.5em;
+    }
+    @media screen and (max-width: 840px) {
+        font-size: 1.4em;
+    }
+    @media screen and (max-width: 830px) {
+        font-size: 1.3em;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 1.3em;
+    }
+    @media screen and (max-width: 780px) {
+        display: none;
+    }
   }
   .logo {
     width: 100%;
