@@ -25,6 +25,7 @@ const theme = {
         objectLevel2: "#1f1137",
     },
 /* Temas Secrétos */
+/* Incompleto :v */
     trans: {
         backgroundBase: "#f4c6f2",
         backgroundLevel1: "#e2d2f6",

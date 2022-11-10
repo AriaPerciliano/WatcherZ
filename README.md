@@ -22,4 +22,4 @@ Após isso, execute a seguinte linha no terminal para instalar as dependências:
   ```
   npm i
   ```
-E então é utilizar o npm run dev para iniciar o [servidor local](http://localhost:3000)
+E então é utilizar o `npm run dev` para iniciar o [servidor local](http://localhost:3000)
