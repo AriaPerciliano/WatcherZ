@@ -17,9 +17,14 @@ const StyledMenu = styled.header`
   position: fixed;
   width: 100%;
   z-index: 51;
+  StyledImg {
+    padding: 20px;
+  }
   h3 {
-    display: inline;
     font-size: 2em;
+    display: inline;
+    position: fixed;
+    left: 75px;
   }
   .logo {
     width: 100%;
@@ -37,8 +42,9 @@ export default function Menu({ filterValue, setfilterValue }) {
   return (
     <StyledMenu>
       <div>
-        <Logo /><h3>WatcherZ</h3>
+        <Logo />
       </div>
+      <h3>WatcherZ</h3>
       <Search filterValue={filterValue} setfilterValue={setfilterValue} />
       <DarkModeSwitch />
     </StyledMenu>
