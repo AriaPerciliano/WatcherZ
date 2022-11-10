@@ -7,7 +7,7 @@ export const StyledTimeline = styled.div`
   margin-bottom: 60px;
   padding: 16px;
   overflow: hidden;
-  background-color: #F8EDFF;
+  background-color: ${({ theme }) => theme.backgroundLevel2};
   border-radius: 0px 0px 15px 15px;
   h2 {
     font-size: 20px;
@@ -48,7 +48,7 @@ export const StyledTimeline = styled.div`
           display: block;
           padding-right: 24px;
           padding-bottom: 8px;
-          color: ${({ theme }) => theme.textColorBase || "#222222"};
+          color: ${({ theme }) => theme.textColorBase};
         }
       }
     }
