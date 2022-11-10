@@ -1,20 +1,20 @@
 import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
-import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 
 function HomePage() {
-    const homePageStyles = {
-    };
     const  [filterValue, setfilterValue] = React.useState("");
 
 
     return (
         <>
-            <CSSReset />
-            <div style={homePageStyles}>
+            <div style={{
+                display: "flex",
+                flexDirection: "column",
+                flex: 1,
+            }}>
                 <Menu filterValue={filterValue} setfilterValue={setfilterValue} />
                 <Header />
                 <Timeline searchValue={filterValue} playlists={config.playlists}>
@@ -34,8 +34,8 @@ const StyledHeader = styled.div`
         height: 100px;
         border-radius: 50%;
         border-style: solid;
-        border-width: 3px;
-        border-color: #6C4888;
+        border-width: 4px;
+        border-color: ${({ theme }) => theme.objectBase};
     }
     .user-info {
         display: flex;
@@ -44,7 +44,7 @@ const StyledHeader = styled.div`
         padding: 16px 16px 26px;
         gap: 16px;
         font-size: 20px;
-        background-color: #EADEF4;
+        background-color: ${({ theme }) => theme.backgroundLevel1};
         border-radius: 0px 0px 10px 10px;
     }
 `;
