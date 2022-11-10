@@ -12,14 +12,14 @@ export const CSSReset = createGlobalStyle`
   }
 
   *::-webkit-scrollbar-track {
-    background: #EBE6EF;
+    background: ${({ theme }) => theme.objectLevel2};
     border-radius: 5px;
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #520291;
+    background-color: ${({ theme }) => theme.objectBase};
     border-radius: 10px;
-    border: 3px solid #EBE6EF;
+    border: 3px solid ${({ theme }) => theme.objectLevel1};
   }
 /* Reset */
   * {
@@ -30,7 +30,8 @@ export const CSSReset = createGlobalStyle`
   }
   body {
     font-family: sans-serif;
-    background-color: #DDC5F1;
+    background-color: ${({ theme }) => theme.backgroundBase};
+    color: ${({ theme }) => theme.textColorBase};
   }
 /* NextJS */
   html {
