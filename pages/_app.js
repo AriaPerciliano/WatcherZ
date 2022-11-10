@@ -24,6 +24,7 @@ const theme = {
         objectLevel1: "#202020",
         objectLevel2: "#313131",
     },
+/* Temas Secrétos */
     trans: {
         backgroundBase: "#DDC5F1",
         backgroundLevel1: "#202020",
@@ -46,20 +47,29 @@ const theme = {
     }
 };
 
-function MyApp({ Component, pageProps }) {
-    
-    const contexto = React.useContext(ColorModeContext);
-
+function ProviderWrapper(props) {
     return (
-    <>
-        <ColorModeProvider>
-            <ThemeProvider theme={theme[contexto.mode]}>
-                <CSSReset />
-                <Component {...pageProps} />
-            </ThemeProvider>
+        <ColorModeProvider initialMode={"light"}>
+            {props.children}
         </ColorModeProvider>
-    </>
     )
 }
 
-export default MyApp;
+function MyApp({ Component, pageProps }) {
+    const contexto = React.useContext(ColorModeContext);
+
+    return (
+        <ThemeProvider theme={theme[contexto.mode]}>
+            <CSSReset />
+            <Component {...pageProps} />
+        </ThemeProvider>
+    )
+}
+
+export default function _App(props) {
+    return (
+        <ProviderWrapper>
+            <MyApp {...props} />
+        </ProviderWrapper>
+    )
+};
