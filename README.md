@@ -1,5 +1,5 @@
 # WatcherZ
-![Logo](https://raw.githubusercontent.com/AriaPerciliano/WatcherZ/main/public/logo.png)
+![Logo](https://raw.githubusercontent.com/AriaPerciliano/WatcherZ/main/public/logo2.png)
 
 [English Version](/public/README_en-us.md)
 >O WatcherZ é um clone do Youtube que está sendo desenvolvido durante a Imersão React 5 da Alura
