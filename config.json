@@ -178,12 +178,5 @@
                 "thumb": "https://img.youtube.com/vi/0JWMVc1CqpA/hqdefault.jpg"
             }
         ]
-    },
-    "favorites": [
-        {
-            "channel-name": "NomePlaceholder",
-            "channel-url": "linkPlaceholder",
-            "channel-pfp": "https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec"
-        }
-    ]
+    }
 }
