@@ -23,7 +23,7 @@ const StyledSwitch = styled.div`
     content: "";
     background-color: #fafafa;
     border: 1px solid #333333;
-    width: 23px;
+    width: 24px;
     height: 24px;
     border-radius: 100%;
     position: absolute;
