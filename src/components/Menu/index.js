@@ -1,6 +1,7 @@
 import { CONFIG_FILES } from "next/dist/shared/lib/constants";
 import styled from "styled-components";
 import config from "../../../config.json";
+import DarkModeSwitch from "./components/DarkmodeSwitch";
 import Search from "./components/Seach";
 
 const StyledMenu = styled.header`
@@ -8,14 +9,18 @@ const StyledMenu = styled.header`
   flex-direction: row;
   height: 56px;
   justify-content: space-between;
-  background-color: ${({ theme }) => theme.backgroundLevel1 || "#EADEF4"};
-  border: 1px solid ${({ theme }) => theme.borderBase || "#e5e5e5"};
+  background-color: ${({ theme }) => theme.backgroundLevel1};
+  border: 1px solid ${({ theme }) => theme.borderBase};
   align-items: center;
   padding: 0 16px;
   gap: 16px;
   position: fixed;
   width: 100%;
   z-index: 51;
+  h3 {
+    display: inline;
+    font-size: 2em;
+  }
   .logo {
     width: 100%;
     max-width: 80px;
@@ -23,7 +28,7 @@ const StyledMenu = styled.header`
       max-width: 127px;
     }
     .text {
-      fill: ${({ theme }) => theme.textColorBase || "#222222"};
+      fill: ${({ theme }) => theme.textColorBase};
     }
   }
 `;
@@ -32,15 +37,17 @@ export default function Menu({ filterValue, setfilterValue }) {
   return (
     <StyledMenu>
       <div>
-        <Logo />
+        <Logo /><h3>WatcherZ</h3>
       </div>
       <Search filterValue={filterValue} setfilterValue={setfilterValue} />
+      <DarkModeSwitch />
     </StyledMenu>
   );
 }
 /* Png Logo */
 const StyledImg = styled.img`
   height: 35px;
+  margin-right: 10px;
 `;
 
 function Logo() {
