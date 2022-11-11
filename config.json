@@ -4,6 +4,15 @@
     "github": "AriaPerciliano",
     "banner": "https://wallpaperaccess.com/full/2994127.png",
     "logo": "logo.png",
+    "category": {
+        "playlist": [
+            "Music",
+            "Gaming",
+            "Science!",
+            "Front-End",
+            "Back-End"
+        ]
+    },
     "favorites": {
         "Canais Favoritos": [
             {
@@ -19,6 +28,68 @@
         ]
     },
     "playlists": {
+        "Music": [
+            {
+                "title": "Mary On A Cross",
+                "url": "https://www.youtube.com/watch?v=CJe2qhAJjWM",
+                "thumb": "https://img.youtube.com/vi/CJe2qhAJjWM/hqdefault.jpg"
+            },
+            {
+                "title": "Duvet",
+                "url": "https://www.youtube.com/watch?v=o7fgFaXKVa0",
+                "thumb": "https://img.youtube.com/vi/o7fgFaXKVa0/hqdefault.jpg"
+            },
+            {
+                "title": "First Love / Late Spring",
+                "url": "https://www.youtube.com/watch?v=WCphVz0ZGns",
+                "thumb": "https://img.youtube.com/vi/WCphVz0ZGns/hqdefault.jpg"
+            },
+            {
+                "title": "Relay",
+                "url": "https://www.youtube.com/watch?v=OI1KfJTrixQ",
+                "thumb": "https://img.youtube.com/vi/OI1KfJTrixQ/hqdefault.jpg"
+            },
+            {
+                "title": "The Town Inside Me",
+                "url": "https://www.youtube.com/watch?v=uQTBzmBDSv0",
+                "thumb": "https://img.youtube.com/vi/uQTBzmBDSv0/hqdefault.jpg"
+            },
+            {
+                "title": "Mariya Takeuchi - Plastic Love 竹内 まりや",
+                "url": "https://www.youtube.com/watch?v=86vaOUEjWzM",
+                "thumb": "https://img.youtube.com/vi/86vaOUEjWzM/hqdefault.jpg"
+            },
+            {
+                "title": "Sequestro as 11 (prod. MC VV & EF)",
+                "url": "https://www.youtube.com/watch?v=FAQ6wBz5skk",
+                "thumb": "https://img.youtube.com/vi/FAQ6wBz5skk/hqdefault.jpg"
+            },
+            {
+                "title": "真夜中のドア/Stay With Me",
+                "url": "https://www.youtube.com/watch?v=VEe_yIbW64w",
+                "thumb": "https://img.youtube.com/vi/VEe_yIbW64w/hqdefault.jpg"
+            },
+            {
+                "title": "No Surprises",
+                "url": "https://www.youtube.com/watch?v=LBt60dfwEBY",
+                "thumb": "https://img.youtube.com/vi/LBt60dfwEBY/hqdefault.jpg"
+            },
+            {
+                "title": "we fell in love in october",
+                "url": "https://www.youtube.com/watch?v=4DyV0hWOdQw",
+                "thumb": "https://img.youtube.com/vi/4DyV0hWOdQw/hqdefault.jpg"
+            },
+            {
+                "title": "Ashes",
+                "url": "https://www.youtube.com/watch?v=VAhIiWX8Vho",
+                "thumb": "https://img.youtube.com/vi/VAhIiWX8Vho/hqdefault.jpg"
+            },
+            {
+                "title": "I Want You To Love Me",
+                "url": "https://www.youtube.com/watch?v=tdp3LPK7cGA",
+                "thumb": "https://img.youtube.com/vi/tdp3LPK7cGA/hqdefault.jpg"
+            }
+        ],
         "Gaming": [
             {
                 "title": "stay in the corner",
