@@ -4,6 +4,20 @@
     "github": "AriaPerciliano",
     "banner": "https://wallpaperaccess.com/full/2994127.png",
     "logo": "logo.png",
+    "favorites": {
+        "Canais Favoritos": [
+            {
+                "id": "0",
+                "github": "omariosouto",
+                "channelLink": ""
+            },             
+            {
+                "id": "1",
+                "github": "NayanneBatista",
+                "channelLink": ""
+            }
+        ]
+    },
     "playlists": {
         "Gaming": [
             {

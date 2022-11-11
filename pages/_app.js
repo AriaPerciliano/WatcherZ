@@ -2,6 +2,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { CSSReset } from "../src/components/CSSReset";
 import ColorModeProvider, { ColorModeContext } from "../src/components/Menu/components/ColorMode";
+import RegisterVideo from "../src/components/RegisterVideo";
 
 const theme = {
     light: {
@@ -13,6 +14,7 @@ const theme = {
         objectBase: "#b9acd4",
         objectLevel1: "#d1cdec",
         objectLevel2: "#d1cdec",
+        buttonBase: "#ab8ce6",
     },
     dark: {
         backgroundBase: "#0a0612",
@@ -23,18 +25,20 @@ const theme = {
         objectBase: "#341d5c",
         objectLevel1: "#1f1137",
         objectLevel2: "#1f1137",
+        buttonBase: "#5021a3",
     },
 /* Temas Secrétos */
 /* Incompleto :v */
     trans: {
-        backgroundBase: "#f4c6f2",
+        backgroundBase: "#aae0f0",
         backgroundLevel1: "#e2d2f6",
         backgroundLevel2: "#f3d7f4",
         borderBase: "#aae0f0",
         textColorBase: "#130c1f",
-        objectBase: "#aae0f0",
-        objectLevel1: "#ece2f4",
-        objectLevel2: "#bdedfb",
+        objectBase: "#aaeef0",
+        objectLevel1: "#e2d2f6",
+        objectLevel2: "#e2d2f6",
+        buttonBase: "#ab8ce6",
     },
     goth1909: {
         backgroundBase: "#000000",
@@ -45,12 +49,13 @@ const theme = {
         objectBase: "#000000",
         objectLevel1: "#1e1e1e",
         objectLevel2: "#1e1e1e",
+        buttonBase: "#5021a3",
     }
 };
 
 function ProviderWrapper(props) {
     return (
-        <ColorModeProvider initialMode={"light"}>
+        <ColorModeProvider initialMode={"dark"}>
             {props.children}
         </ColorModeProvider>
     )
@@ -58,11 +63,12 @@ function ProviderWrapper(props) {
 
 function MyApp({ Component, pageProps }) {
     const contexto = React.useContext(ColorModeContext);
-
+    //o RegisterVideo dentro do _app.js faz com que o botão apareça em todas as paginas. Dunno if i like this tho, might change it in the future.
     return (
         <ThemeProvider theme={theme[contexto.mode]}>
             <CSSReset />
             <Component {...pageProps} />
+            <RegisterVideo />
         </ThemeProvider>
     )
 }

@@ -2,7 +2,7 @@ import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
 import Menu from "../src/components/Menu";
-import { StyledTimeline } from "../src/components/Timeline/components/Timeline";
+import { StyledTimeline } from "../src/components/Timeline/index";
 
 function HomePage() {
     const  [filterValue, setfilterValue] = React.useState("");
@@ -72,6 +72,7 @@ function Header() {
 function Timeline({searchValue, ...props}) {
     const playlistName = Object.keys(props.playlists);
     return (
+        <>
         <StyledTimeline>
             {playlistName.map(function (playlistName) {
                 const videos = props.playlists[playlistName];
@@ -98,5 +99,6 @@ function Timeline({searchValue, ...props}) {
                 )
             })}
         </StyledTimeline>
+        </>
     )
 }
