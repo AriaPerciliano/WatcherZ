@@ -1,3 +1,4 @@
+import { createClient } from "@supabase/supabase-js";
 import React from "react";
 import { StyledRegisterVideo } from "./styles";
 
@@ -20,11 +21,20 @@ function userForm(formProps) {
     };
 }
 
+const PROJECT_URL = "https://knqzqperjebhxhfpkajn.supabase.co";
+const PUBLIC_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtucXpxcGVyamViaHhoZnBrYWpuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjgxNTQ1NDQsImV4cCI6MTk4MzczMDU0NH0.mOoNS6SEa4s1ARoQkXITUJX8hj2hBYDC05uOFAfFhpA";
+const supabase = createClient(PROJECT_URL, PUBLIC_KEY);
+
+function getThumbnail(url) {
+    return `https://img.youtube.com/vi/${url.split("v=")[1]}/hqdefault.jpg`;
+}
+
 export default function RegisterVideo() {
     const formRegister = userForm({
-        initialValues: { title: "", url: "" }
+        initialValues: { title: "Fiona Apple - Relay (Official Audio)", url: "https://www.youtube.com/watch?v=OI1KfJTrixQ", playlist: "Music" }
     });
     const [visibleForm, setVisibleForm] = React.useState(false);
+
     return (
         <StyledRegisterVideo>
             <button className="add-video" onClick={() => setVisibleForm(true)}>
@@ -34,6 +44,21 @@ export default function RegisterVideo() {
                 ? (
                     <form onSubmit={(evento) => {
                         evento.preventDefault();
+                        console.log(formRegister.values);
+
+                        supabase.from("video").insert({
+                            title: formRegister.values.title,
+                            url: formRegister.values.url,
+                            thumb: getThumbnail(formRegister.values.url),
+                            playlist: formRegister.values.playlist,
+                        })
+                        .then((wasupFools) => {
+                            console.log(wasupFools)
+                        })
+                        .catch((err) => {
+                            console.log(err)
+                        })
+
                         setVisibleForm(false);
                         formRegister.clearForm();
                     }}>
@@ -51,6 +76,12 @@ export default function RegisterVideo() {
                                 placeholder="URL" 
                                 name="url"
                                 values={formRegister.values.url} 
+                                onChange={formRegister.handleChange}
+                            />
+                            <input 
+                                placeholder="Playlist" 
+                                name="playlist"
+                                values={formRegister.values.playlist} 
                                 onChange={formRegister.handleChange}
                             />
                             <button type="submit">

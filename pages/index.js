@@ -3,9 +3,34 @@ import config from "../config.json";
 import styled from "styled-components";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline/index";
+import { videoService } from "../src/services/videoService";
 
 function HomePage() {
-    const  [filterValue, setfilterValue] = React.useState("");
+    const service = videoService();
+    const [filterValue, setfilterValue] = React.useState("");
+    const [playlists, setPlaylists] = React.useState({});
+
+	React.useEffect(() => {
+		service
+            .getAllVideos()
+			.then((dados) => {
+				console.log(dados.data)
+                //forma imutavel
+				const novasPlaylists = { ...playlists }
+				dados.data.forEach((video) => {
+					if (!novasPlaylists[video.playlist]) novasPlaylists[video.playlist] = [];
+                    novasPlaylists[video.playlist] = [
+                        video,
+                        ...novasPlaylists[video.playlist],
+                    ];
+                });
+				setPlaylists(novasPlaylists)
+			})
+
+	}, [])
+
+    console.log(playlists);
+
     return (
         <>
             <div style={{
@@ -15,10 +40,10 @@ function HomePage() {
             }}>
                 <Menu filterValue={filterValue} setfilterValue={setfilterValue} />
                 <Header />
-                <Timeline searchValue={filterValue} playlists={config.playlists}>
+                <Timeline searchValue={filterValue} playlists={playlists}>
                     Conteudo
                 </Timeline>
-        </div>
+            </div>
         </>
     );
 }
@@ -69,36 +94,36 @@ function Header() {
     )
 }
 /* Timeline */
-function Timeline({searchValue, ...props}) {
+function Timeline({ searchValue, ...props }) {
     const playlistName = Object.keys(props.playlists);
     return (
         <>
-        <StyledTimeline>
-            {playlistName.map(function (playlistName) {
-                const videos = props.playlists[playlistName];
-                return (
-                    <section key={playlistName}>
-                        <h2>{playlistName}</h2>
-                        <div>
-                            {videos.filter((video) => {
-                                const titleNormalized = video.title.toLowerCase()
-                                const searchValueNormalized = searchValue.toLowerCase()
-                                return titleNormalized.includes(searchValueNormalized)    
-                            }).map((video) => {
-                                return (
-                                    <a key={video.url} href={video.url}>
-                                        <img src={video.thumb} />
-                                        <span>
-                                            {video.title}
-                                        </span>
-                                    </a>
-                                )
-                            })}
-                        </div>
-                    </section>
-                )
-            })}
-        </StyledTimeline>
+            <StyledTimeline>
+                {playlistName.map(function (playlistName) {
+                    const videos = props.playlists[playlistName];
+                    return (
+                        <section key={playlistName}>
+                            <h2>{playlistName}</h2>
+                            <div>
+                                {videos.filter((video) => {
+                                    const titleNormalized = video.title.toLowerCase()
+                                    const searchValueNormalized = searchValue.toLowerCase()
+                                    return titleNormalized.includes(searchValueNormalized)
+                                }).map((video) => {
+                                    return (
+                                        <a key={video.url} href={video.url}>
+                                            <img src={video.thumb} />
+                                            <span>
+                                                {video.title}
+                                            </span>
+                                        </a>
+                                    )
+                                })}
+                            </div>
+                        </section>
+                    )
+                })}
+            </StyledTimeline>
         </>
     )
 }
