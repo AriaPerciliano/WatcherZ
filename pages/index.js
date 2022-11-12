@@ -131,8 +131,8 @@ function Footer() {
             <section>
                 <div>
                     <p>S2 - Feito com amor por Aria - S2</p>
-                    <a href="#">Github</a>
-                    <a href="#">Linkedin</a>
+                    <a href="https://github.com/AriaPerciliano" target="_blank">Github</a>
+                    <a href="https://www.linkedin.com/in/aria-perciliano/" target="_blank">Linkedin</a>
                 </div>
             </section>
         </StyledFooter>

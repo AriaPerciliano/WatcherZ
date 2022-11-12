@@ -32,21 +32,27 @@ const StyledMenu = styled.header`
 /* Certeza ABSOLUTA que essa não é a melhor forma de fazer isso */
     @media screen and (max-width: 890px) {
         font-size: 1.9em;
+        top: 11px;
     }
     @media screen and (max-width: 880px) {
         font-size: 1.8em;
+        top: 12px;
     }
     @media screen and (max-width: 870px) {
         font-size: 1.7em;
+        top: 13px;
     }
     @media screen and (max-width: 860px) {
         font-size: 1.6em;
+        top: 14px;
     }
     @media screen and (max-width: 850px) {
         font-size: 1.5em;
+        top: 15px;
     }
     @media screen and (max-width: 840px) {
         font-size: 1.4em;
+        top: 15px;
     }
     @media screen and (max-width: 830px) {
         font-size: 1.3em;

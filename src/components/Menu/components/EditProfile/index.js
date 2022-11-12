@@ -25,7 +25,7 @@ export default function EditProfile() {
     const registerForm = userForm({
         initialValues: { github: "", job: "" }
     });
-    const [visibleForm, setVisibleForm] = React.useState(false);
+    /*const [visibleForm, setVisibleForm] = React.useState(false);
 
     return (
         <StyledEditProfile>
@@ -61,5 +61,5 @@ export default function EditProfile() {
                 </form>
             ) : false}
         </StyledEditProfile>
-    )
+    )*/
 }
