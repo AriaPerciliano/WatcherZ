@@ -11,7 +11,6 @@ const StyledMenu = styled.header`
   height: 56px;
   justify-content: space-between;
   background-color: ${({ theme }) => theme.backgroundLevel1};
-  border: 1px solid ${({ theme }) => theme.borderBase};
   align-items: center;
   padding: 0 16px;
   gap: 16px;

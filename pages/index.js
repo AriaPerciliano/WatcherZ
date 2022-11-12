@@ -130,7 +130,7 @@ function Footer() {
         <StyledFooter>
             <section>
                 <div>
-                    <p>S2 - Feito com amor por Aria - S2</p>
+                    <p>S2 - <em>Feito com amor por Aria</em> - S2</p>
                     <a href="https://github.com/AriaPerciliano" target="_blank">Github</a>
                     <a href="https://www.linkedin.com/in/aria-perciliano/" target="_blank">Linkedin</a>
                 </div>
