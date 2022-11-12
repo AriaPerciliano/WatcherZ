@@ -21,7 +21,6 @@ const VideoPlayer = () => {
     const router = useRouter();
     return (
         <StyledVideoPlayer>
-            <h2 className="title">{router.query.title}</h2>
             <iframe
             width="896"
             height="504"
@@ -29,6 +28,7 @@ const VideoPlayer = () => {
             title="Youtube Video Player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
             ></iframe>
+            <h2 className="title">{router.query.title}</h2>
         </StyledVideoPlayer>
     )
 }
