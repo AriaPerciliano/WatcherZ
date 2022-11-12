@@ -9,7 +9,7 @@ This project was made using:
 * Styled Components
 * NextJS
 
-![Logo](https://raw.githubusercontent.com/AriaPerciliano/WatcherZ/main/public/image.png)
+![sc](https://raw.githubusercontent.com/AriaPerciliano/WatcherZ/main/public/image.png)
 
 ## How to locally run the project?
 Primeiramente é preciso cumprir os seguintes requisitos:
@@ -21,7 +21,10 @@ First, clone this repository using the following line of code on your terminal:
   ```
   git clone https://github.com/AriaPerciliano/WatcherZ
   ```
-After that, use the following line on your terminal to install all the dependences:
+After that, use the following lines on your terminal to install all the dependences:
+  ```
+  npm install next react react-dom styled-components @supabase/supabase-js
+  ```
   ```
   npm i
   ```
