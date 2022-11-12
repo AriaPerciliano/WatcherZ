@@ -2,24 +2,27 @@
 ![Logo](https://raw.githubusercontent.com/AriaPerciliano/WatcherZ/main/public/logo.png)
 
 [Versão em Português](../README.md)
->O WatcherZ é um clone do Youtube que está sendo desenvolvido durante a Imersão React 5 da Alura
+>WatcherZ is a Youtube clone developed during Alura's "Imersão React 5"
 
-Esse projéto foi feito utilizando:
+This project was made using:
 * ReactJS
 * Styled Components
 * NextJS
 
-## Como rodar o projéto localmente?
-Primeiramente é preciso cumprir  os seguintes requisitos:
-* Possuir o `nodejs` instalado no PC
-* Ter todas as dependências instaladas
+![Logo](https://raw.githubusercontent.com/AriaPerciliano/WatcherZ/main/public/image.png)
 
-Primeiro, clone esse repositório utilizando a seguinte linha no terminal:
+## How to locally run the project?
+Primeiramente é preciso cumprir os seguintes requisitos:
+First of all. You must meet the following requirements
+* Have `nodejs` installed
+* Install all the project's dependences
+
+First, clone this repository using the following line of code on your terminal:
   ```
   git clone https://github.com/AriaPerciliano/WatcherZ
   ```
-Após isso, execute a seguinte linha no terminal para instalar as dependências:
+After that, use the following line on your terminal to install all the dependences:
   ```
   npm i
   ```
-E então é utilizar o npm run dev para iniciar o [servidor local](http://localhost:3000)
+And then, use `npm run dev` to start the [local server](http://localhost:3000)
