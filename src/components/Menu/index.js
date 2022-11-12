@@ -2,6 +2,7 @@ import { CONFIG_FILES } from "next/dist/shared/lib/constants";
 import styled from "styled-components";
 import config from "../../../config.json";
 import DarkModeSwitch from "./components/DarkmodeSwitch";
+import EditProfile from "./components/EditProfile";
 import Search from "./components/Seach";
 
 const StyledMenu = styled.header`
@@ -25,7 +26,7 @@ const StyledMenu = styled.header`
     display: inline;
     position: fixed;
     left: 75px;
-/* Certeza que essa não é a melhor forma de fazer isso */
+/* Certeza ABSOLUTA que essa não é a melhor forma de fazer isso */
     @media screen and (max-width: 890px) {
         font-size: 1.9em;
     }
@@ -74,6 +75,7 @@ export default function Menu({ filterValue, setfilterValue }) {
       </div>
       <h3>WatcherZ</h3>
       <Search filterValue={filterValue} setfilterValue={setfilterValue} />
+      <EditProfile />
       <DarkModeSwitch />
     </StyledMenu>
   );

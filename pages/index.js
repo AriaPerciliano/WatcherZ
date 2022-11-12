@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline/index";
 import { videoService } from "../src/services/videoService";
+import { StyledHeader } from "../src/components/Header"
 
 function HomePage() {
     const service = videoService();
@@ -14,7 +15,6 @@ function HomePage() {
 		service
             .getAllVideos()
 			.then((dados) => {
-				console.log(dados.data)
                 //forma imutavel
 				const novasPlaylists = { ...playlists }
 				dados.data.forEach((video) => {
@@ -28,8 +28,6 @@ function HomePage() {
 			})
 
 	}, [])
-
-    console.log(playlists);
 
     return (
         <>
@@ -50,28 +48,8 @@ function HomePage() {
 
 export default HomePage
 
-/* Header */
-const StyledHeader = styled.div`
-    .user-info img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        border-style: solid;
-        border-width: 4px;
-        border-color: ${({ theme }) => theme.objectBase};
-    }
-    .user-info {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        padding: 16px 16px 26px;
-        gap: 16px;
-        font-size: 20px;
-        background-color: ${({ theme }) => theme.backgroundLevel1};
-        border-radius: 0px 0px 10px 10px;
-    }
-`;
 /* Banner */
+//Por algum motivo bizarro, colocar o banner em outro lugar parece quebrar tudo :v
 const StyledBanner = styled.div`
     background-color: #270244;
     background-image: url(${config.banner});

@@ -4,6 +4,7 @@ import styled from "styled-components"
 const StyledSearch = styled.div`
   display: flex;
   flex-direction: row;
+  object-position: center;
   border: 1px solid ${({ theme }) => theme.borderBase || "#E3D2F2"};
   max-width: 425px;
   width: 100%;
