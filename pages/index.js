@@ -5,6 +5,8 @@ import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline/index";
 import { videoService } from "../src/services/videoService";
 import { StyledHeader } from "../src/components/Header"
+import { StyledFooter } from "../src/components/Footer";
+import Link from "next/link";
 
 function HomePage() {
     const service = videoService();
@@ -41,6 +43,7 @@ function HomePage() {
                 <Timeline searchValue={filterValue} playlists={playlists}>
                     Conteudo
                 </Timeline>
+                <Footer />
             </div>
         </>
     );
@@ -88,20 +91,50 @@ function Timeline({ searchValue, ...props }) {
                                     const searchValueNormalized = searchValue.toLowerCase()
                                     return titleNormalized.includes(searchValueNormalized)
                                 }).map((video) => {
+                                    let idVideo;
+                                    const linkFormat =
+                                      /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+                                    const match = video.url.match(linkFormat);
+                                    if (match && match[2].length == 11) {
+                                        idVideo = match[2];
+                                    }
                                     return (
-                                        <a key={video.url} href={video.url}>
+                                        <Link 
+                                        key={video.url} 
+                                        href={{
+                                            pathname: "/video",
+                                            query: {
+                                                v: idVideo,
+                                                title: video.title,
+                                            },
+                                        }}>
                                             <img src={video.thumb} />
                                             <span>
                                                 {video.title}
                                             </span>
-                                        </a>
+                                        </Link>
                                     )
                                 })}
                             </div>
                         </section>
+
                     )
                 })}
             </StyledTimeline>
         </>
+    )
+}
+
+function Footer() {
+    return (
+        <StyledFooter>
+            <section>
+                <div>
+                    <p>S2 - Feito com amor por Aria - S2</p>
+                    <a href="#">Github</a>
+                    <a href="#">Linkedin</a>
+                </div>
+            </section>
+        </StyledFooter>
     )
 }

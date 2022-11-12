@@ -25,7 +25,10 @@ const StyledMenu = styled.header`
     font-size: 2em;
     display: inline;
     position: fixed;
+    top: 10px;
     left: 75px;
+    color: ${({ theme }) => theme.textColorBase};
+
 /* Certeza ABSOLUTA que essa não é a melhor forma de fazer isso */
     @media screen and (max-width: 890px) {
         font-size: 1.9em;
@@ -70,10 +73,12 @@ const StyledMenu = styled.header`
 export default function Menu({ filterValue, setfilterValue }) {
   return (
     <StyledMenu>
-      <div>
-        <Logo />
-      </div>
-      <h3>WatcherZ</h3>
+      <a href="/">
+        <div>
+          <Logo />
+        </div>
+        <h3>WatcherZ</h3>
+      </a>
       <Search filterValue={filterValue} setfilterValue={setfilterValue} />
       <EditProfile />
       <DarkModeSwitch />
