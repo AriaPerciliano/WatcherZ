@@ -24,7 +24,6 @@ export const StyledTimeline = styled.div`
   }
   .favorites {
     display: flex;
-    overflow: hidden;
     padding: 20px;
   }
   .favorite-name {
