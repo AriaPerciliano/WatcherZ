@@ -4,13 +4,14 @@
 [English Version](/public/README_en-us.md)
 >O WatcherZ é um clone do Youtube que está sendo desenvolvido durante a Imersão React 5 da Alura
 
-Esse projéto foi feito utilizando:
-* ReactJS
-* Styled Components
-* NextJS
-* Supabase
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **WatcherZ**
+| :label: Tecnologias | ReactJS, Styled Components, NextJS, Supabase
+| :rocket: URL         | https://watcher-z.vercel.app/
+| :fire: Desafio     | https://www.alura.com.br/imersao-react
 
-![sc](https://raw.githubusercontent.com/AriaPerciliano/WatcherZ/main/public/image.png)
+![sc](https://raw.githubusercontent.com/AriaPerciliano/WatcherZ/main/public/image.png#vitrinedev)
 
 ## Como rodar o projéto localmente?
 Primeiramente é preciso cumprir  os seguintes requisitos:
