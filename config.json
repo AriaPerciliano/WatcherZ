@@ -8,11 +8,25 @@
         "playlist": [
         ]
     },
-    "favorites": [
-        {
-            "title": "",
-            "url": "",
-            "thumb": ""
-        }
-    ]
+    "favorites": {
+        "Aluratubers": [
+            {
+                "github": "omariosouto",
+                "url": "https://github.com/omariosouto",
+                "name": "Mario Souto"
+            },
+            {
+                "github": "NayanneBatista",
+                "url": "https://github.com/NayanneBatista",
+                "name": "Nay"
+            },
+            {
+                "github": "alura-cursos",
+                "url": "https://github.com/alura-cursos",
+                "name": "Alura Cursos Online"
+            }
+        
+        ]
+    }
+        
 }

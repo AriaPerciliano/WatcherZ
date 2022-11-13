@@ -22,6 +22,36 @@ export const StyledTimeline = styled.div`
     max-width: 210px;
     height: auto;
   }
+  .favorites {
+    display: flex;
+    overflow: hidden;
+    padding: 20px;
+  }
+  .favorite-name {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 0.99em;
+    color: ${({ theme }) => theme.textColorBase};
+  }
+  .favorites-container {
+    width: 100px;
+    height: 124px;
+    text-align: center;
+  }
+  .favorite-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid;
+    border-color: ${({ theme }) => theme.objectBase};
+  }
+  .favorito-text {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    padding-right: 0;
+  }
   section {
     width: 100%;
     padding: 0;

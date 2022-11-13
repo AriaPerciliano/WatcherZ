@@ -40,7 +40,10 @@ function HomePage() {
             }}>
                 <Menu filterValue={filterValue} setfilterValue={setfilterValue} />
                 <Header />
-                <Timeline searchValue={filterValue} playlists={playlists}>
+                <Timeline 
+                searchValue={filterValue} 
+                playlists={playlists}
+                favorites={config.favorites}>
                     Conteudo
                 </Timeline>
                 <Footer />
@@ -77,6 +80,7 @@ function Header() {
 /* Timeline */
 function Timeline({ searchValue, ...props }) {
     const playlistName = Object.keys(props.playlists);
+    const favoriteName = Object.keys(props.favorites);
     return (
         <>
             <StyledTimeline>
@@ -118,6 +122,34 @@ function Timeline({ searchValue, ...props }) {
                             </div>
                         </section>
 
+                    )
+                })}
+                {favoriteName.map((favoriteName) => {
+                    const favorites = props.favorites[favoriteName]
+                    return (
+                        <section key={favoriteName}>
+                            <h2>{favoriteName}</h2>
+                            <div className="favorites">
+                                {favorites
+                                    .map((favorites) => {
+                                    return (
+                                        <a 
+                                        key={favorites.name}
+                                        className="favorites-container"
+                                        href={favorites.url}
+                                        target="_blank">
+                                            <img 
+                                                className="favorite-icon"
+                                                src={`https://github.com/${favorites.github}.png`}
+                                            />
+                                            <h3 className="favorite-name">{favorites.name}</h3>
+                                        </a>
+                                    )
+                                })
+
+                                }
+                            </div>
+                        </section>
                     )
                 })}
             </StyledTimeline>
